@@ -1,6 +1,6 @@
 Summary: F5 Basic iControlLX
 Name: mailer
-Version: 0.0.1
+Version: 0.0.5
 Release: 0001
 BuildArch: noarch
 Group: Development/Libraries
@@ -13,8 +13,8 @@ Basic iControlLX for getting started
 %define APP_DIR /var/config/rest/iapps/%{name}
 
 %prep
-cp -r %{main}/node_modules %{_builddir}/%{name}-%{version}
 cp -r %{main}/src %{_builddir}/%{name}-%{version}
+cp -r %{main}/node_modules %{_builddir}/%{name}-%{version}/node_modules
 
 %build
 npm prune --production
